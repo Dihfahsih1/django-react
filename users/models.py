@@ -13,7 +13,7 @@ class User(AbstractUser):
     return self.username
   
   class Student(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    user = models.OneToOneField('User',on_delete=models.CASCADE)
     
     def __str__(self):
         return self.user.username
